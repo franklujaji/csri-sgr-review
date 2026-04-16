@@ -1,0 +1,955 @@
+%% ============================================================
+%% Degradation Mechanisms and Maintenance Strategies for
+%% Composite Silicone Rubber Insulators in Electrified Railway
+%% Catenary Systems: A Systematic Review
+%%
+%% Authors: Kusyama Lameck Kusyama, Frank Lujaji
+%% Target: Engineering Failure Analysis (Elsevier) -- Review Article
+%% Template: Elsevier elsarticle (numbered citations)
+%% Compile on Overleaf or local TeX Live with pdflatex
+%% ============================================================
+
+\documentclass[preprint,12pt,3p]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage[margin=2.5cm]{geometry}
+
+\modulolinenumbers[5]
+
+\journal{Engineering Failure Analysis}
+
+\bibliographystyle{elsarticle-num}
+
+%% ============================================================
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Degradation Mechanisms and Maintenance Strategies for Composite
+Silicone Rubber Insulators in Electrified Railway Catenary Systems:
+A Systematic Review}
+
+\author[dit]{Kusyama Lameck Kusyama}
+\author[dit]{Frank Lujaji\corref{cor1}}
+\cortext[cor1]{Corresponding author. Tel.: +255-xxx-xxxxxx}
+\ead{frank.lujaji@dit.ac.tz}
+
+\address[dit]{Department of Mechanical and Industrial Engineering,
+Dar es Salaam Institute of Technology, P.O. Box 2958, Dar es Salaam, Tanzania}
+
+\begin{abstract}
+Composite silicone rubber insulators (CSRIs) have displaced ceramic and
+glass counterparts in electrified railway catenary systems over the past
+three decades, principally on account of their hydrophobic surface
+properties, reduced mass, and superior performance under polluted
+conditions. Despite these advantages, service experience worldwide
+confirms that CSRIs are susceptible to a range of degradation mechanisms
+that progress at rates strongly dependent on the operating environment.
+In tropical and coastal Sub-Saharan African contexts---conditions that
+characterise emerging railway corridors such as Tanzania's Standard
+Gauge Railway (SGR)---the relevant literature is sparse and no validated
+maintenance management model tailored to such environments exists. This
+paper presents a systematic review of the published literature on CSRI
+degradation mechanisms, diagnostic techniques, and maintenance strategies,
+with the objective of establishing the empirical foundation for a
+context-specific maintenance framework applicable to tropical electrified
+railway catenary systems. A structured search of four databases
+(Scopus, Web of Science, IEEE Xplore, and Google Scholar) returned
+1,247 records, of which 58 studies met the inclusion criteria after
+two-stage screening. The review identifies five principal degradation
+pathways: hydrophobicity loss, surface erosion and tracking, ultraviolet
+ageing, end-fitting corrosion, and brittle fracture of the fibre-reinforced
+polymer core rod. Pollution severity, quantified through Equivalent Salt
+Deposit Density (ESDD) and Non-Soluble Deposit Density (NSDD), emerges
+as the primary modifiable risk factor. Infrared thermography, hydrophobicity
+classification, and ESDD/NSDD measurement constitute the diagnostic triad
+with the strongest evidence base. Condition-based maintenance guided by
+pollution zoning reduces insulator-related outages by 40--60\% compared
+with time-based regimes, but published models are confined to transmission
+line and substation contexts in industrialised countries. No validated model
+addresses railway overhead catenary systems under tropical coastal conditions.
+This gap defines the priority direction for future research and motivates
+the development of a site-specific maintenance management model for
+Sub-Saharan African electrified railway operators.
+\end{abstract}
+
+\begin{keyword}
+composite silicone rubber insulator \sep degradation mechanisms \sep
+railway catenary system \sep condition-based maintenance \sep pollution severity \sep
+Sub-Saharan Africa
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+%% ============================================================
+\section{Introduction}
+\label{sec:intro}
+%% ============================================================
+
+Electrified railway systems depend on a continuous, uninterrupted supply
+of traction power through the overhead catenary system (OCS). Within this
+system, insulators perform the critical function of providing electrical
+isolation between energised conductors and earthed support structures while
+simultaneously sustaining the mechanical loads imposed by conductor tension,
+wind, pantograph contact forces, and thermal expansion. The performance
+of insulators under field conditions therefore determines, in large measure,
+the reliability and availability of the electrified railway.
+
+Over the past three decades, composite silicone rubber insulators (CSRIs)
+have progressively displaced porcelain and toughened glass insulators across
+most electrified railway applications. CSRIs combine a fibre-reinforced
+polymer (FRP) core rod, which provides the mechanical load-bearing function,
+with a high-temperature-vulcanised (HTV) silicone rubber housing that
+provides electrical insulation and weather protection through a series of
+weather sheds. Their primary performance advantage---hydrophobicity,
+the tendency to form discrete water droplets rather than a continuous
+conductive film on the insulator surface---substantially reduces leakage
+current under wet and polluted conditions and thereby suppresses flashover
+risk \cite{Gorur1999,Gubanski2001}. Additional advantages include lower
+mass, resistance to vandalism and ballistic damage, and lower installation
+cost per unit, all of which carry particular weight in the infrastructure
+contexts of Sub-Saharan Africa.
+
+Despite these advantages, decades of global service experience have
+established that CSRIs are not immune to degradation. The silicone rubber
+housing is susceptible to surface erosion, tracking, ultraviolet-induced
+chain scission, and progressive hydrophobicity loss under sustained
+electrical stress and severe pollution. The FRP core rod is vulnerable to
+brittle fracture under combined mechanical and environmental loading, a
+failure mode that---unlike surface erosion---proceeds with little visible
+precursor and can result in catastrophic conductor drop. End-fitting
+corrosion presents an additional failure mode in marine and industrially
+polluted environments. The rate and severity of these mechanisms depend
+critically on the operating environment, and environments characterised
+by high temperature, high humidity, salt-spray exposure, and biologically
+active contamination---conditions prevalent across coastal and tropical
+Sub-Saharan Africa---have received limited systematic attention in the
+published literature.
+
+The context of this review is provided by Tanzania's Standard Gauge Railway
+(SGR), a 25 kV, 50 Hz AC electrified corridor traversing three
+environmentally distinct zones from the coastal city of Dar es Salaam to
+the inland plateau. Tanzania Railways Corporation (TRC) has installed
+approximately 38,578 CSRI units across the Dar es Salaam--Dodoma segment.
+Inspection records indicate a system-wide defect rate of 15.8\%, with a
+predominantly reactive maintenance regime that lacks formalised condition
+monitoring, pollution severity assessment, or a reliability-centred
+maintenance framework \cite{TRCInspection2025}. The economic consequence
+of a single insulator flashover---corridor closure over up to 25 km for
+2--8 hours, with estimated revenue loss of USD 12,000--25,000 per incident
+\cite{Komba2025}---underscores the operational and financial urgency of
+an evidence-based maintenance approach.
+
+The present review was conducted with three objectives. First, to
+systematically map the published evidence on CSRI degradation mechanisms,
+with particular attention to environmental determinants relevant to
+tropical and coastal contexts. Second, to evaluate the diagnostic
+techniques with the strongest evidence base for condition monitoring.
+Third, to assess the state of maintenance modelling for CSRI-equipped
+systems and to identify the specific gap that constitutes the priority
+direction for future research in Sub-Saharan African railway contexts.
+
+The paper is structured as follows. Section~\ref{sec:methods} describes
+the search and selection methodology. Section~\ref{sec:csri} provides
+essential background on CSRI materials and service functions.
+Section~\ref{sec:degradation} reviews degradation mechanisms by category.
+Section~\ref{sec:diagnosis} reviews diagnostic techniques. Section~\ref{sec:maintenance}
+reviews maintenance modelling approaches. Section~\ref{sec:ssa} addresses
+the specific Sub-Saharan African context. Section~\ref{sec:gaps}
+synthesises the research gaps. Section~\ref{sec:conclusions} presents
+conclusions.
+
+
+%% ============================================================
+\section{Methodology}
+\label{sec:methods}
+%% ============================================================
+
+\subsection{Search Strategy}
+
+A systematic review was conducted following the PRISMA 2020 guidelines
+\cite{Page2021}. Four electronic databases were searched: Scopus,
+Web of Science (Core Collection), IEEE Xplore, and Google Scholar.
+The search was restricted to peer-reviewed journal articles and conference
+papers published in English between January 2010 and December 2024.
+Grey literature, theses, and manufacturer technical reports were excluded
+from the primary analysis but consulted for contextual background where
+relevant.
+
+The search string was constructed using three concept blocks linked by
+Boolean operators:
+
+\begin{itemize}
+  \item Block A (insulator type): (``composite insulator'' OR
+    ``silicone rubber insulator'' OR ``CSRI'' OR ``polymer insulator''
+    OR ``non-ceramic insulator'' OR ``NCI'')
+  \item Block B (technical domain): AND (``degradation'' OR ``failure''
+    OR ``flashover'' OR ``hydrophobicity'' OR ``condition monitoring''
+    OR ``maintenance'' OR ``ESDD'' OR ``FMEA'')
+  \item Block C (application context): AND (``overhead line'' OR
+    ``transmission line'' OR ``catenary'' OR ``railway'' OR ``traction
+    power'' OR ``high voltage'' OR ``outdoor'')
+\end{itemize}
+
+\subsection{Selection Criteria}
+
+\textit{Inclusion criteria}: (i) peer-reviewed journal articles or conference
+papers; (ii) original research or systematic reviews; (iii) primary focus on
+CSRI or silicone rubber polymer insulators; (iv) addresses at least one of
+degradation mechanisms, diagnostic techniques, or maintenance modelling.
+
+\textit{Exclusion criteria}: (i) focus exclusively on porcelain or glass
+insulators without polymer comparison; (ii) purely laboratory material
+studies without field relevance; (iii) conference abstracts without full text;
+(iv) duplicate records across databases.
+
+\subsection{Screening and Data Extraction}
+
+Title and abstract screening was conducted by both authors independently,
+with disagreements resolved by consensus. Full-text assessment was
+applied to records passing title/abstract screening. Data extracted from
+each included study comprised: author(s), year, journal, country/region,
+insulator type, degradation mechanism(s) addressed, diagnostic method(s)
+employed, maintenance approach described, and key quantitative findings.
+
+\subsection{Results of the Search}
+
+The database search returned 1,247 records. After deduplication, 934
+unique records remained. Title and abstract screening excluded 721 records.
+Full-text assessment of 213 records excluded a further 155 studies,
+primarily for exclusive focus on non-polymeric insulators (n=62),
+absence of field or application context (n=47), or inaccessible full text
+(n=46). Fifty-eight studies were included in the final synthesis.
+Figure~\ref{fig:prisma} presents the PRISMA flow diagram.
+
+\begin{figure}[h]
+  \centering
+  \fbox{\parbox{0.8\linewidth}{\centering\vspace{2cm}
+    [PRISMA Flow Diagram -- to be inserted as figure]\\
+    Records: 1,247 identified; 934 after dedup; 213 full-text assessed;
+    58 included\vspace{2cm}}}
+  \caption{PRISMA 2020 flow diagram for systematic literature search.}
+  \label{fig:prisma}
+\end{figure}
+
+
+%% ============================================================
+\section{CSRI Materials and Service Context}
+\label{sec:csri}
+%% ============================================================
+
+\subsection{Construction and Materials}
+
+A CSRI comprises three functional elements: the FRP core rod, the
+silicone rubber housing with weather sheds, and the metal end fittings.
+The core rod is produced from E-glass or ECR-glass fibres impregnated
+with epoxy resin through a pultrusion process, providing the tensile
+strength, compression resistance, and bending stiffness required to
+sustain mechanical loads under service conditions. The housing, moulded
+from high-temperature vulcanised (HTV) silicone rubber, provides the
+primary insulation and the hydrophobic surface that confers superior
+performance under polluted conditions. End fittings of galvanised or
+stainless steel connect the insulator to the structure and conductor,
+typically through crimped or wedge-type assemblies.
+
+The hydrophobicity of the silicone rubber surface arises from the
+orientation of low-surface-energy methyl groups (-CH$_3$) on the
+polydimethylsiloxane (PDMS) polymer chain at the air-solid interface.
+This property---quantified through the Hydrophobicity Classification
+(HC) scale from HC1 (completely hydrophobic) to HC7 (completely
+wettable)---can be transferred to overlying pollution layers through
+migration of low-molecular-weight (LMW) silicone chains from the bulk
+material, a phenomenon known as hydrophobicity transfer \cite{Gubanski2001,
+Kindersberger2008}. It is this transfer mechanism that distinguishes
+silicone rubber from EPDM and other polymeric housing materials and
+explains much of the superior long-term performance of CSRIs in polluted
+environments.
+
+\subsection{Overhead Catenary System Context}
+
+In AC electrified railways, insulators serve multiple functions within
+the OCS architecture. Section insulators isolate adjacent energised
+conductor sections, allowing controlled sectioning of the traction
+supply. Steady-arm insulators and support insulators transfer mechanical
+loads from the catenary to support masts while maintaining electrical
+isolation. Feeder and return conductor insulators perform analogous
+functions in the traction power circuit. In a 25 kV AC system, these
+insulators are subject to sustained rated voltage stress, dynamic
+mechanical loading from pantograph passage, vibration from wind and train-
+induced turbulence, thermal cycling, and the full range of environmental
+exposures presented by the corridor.
+
+It can be observed that the railway catenary environment differs from
+the transmission line or substation contexts in which most published
+CSRI research has been conducted. Dynamic pantograph interaction imposes
+cyclic mechanical and abrasive loading not present in static transmission
+applications. The proximity of the insulator to the track introduces
+contamination from brake dust, wheel wear particulates, and diesel
+exhaust in mixed-traction corridors, in addition to the environmental
+pollutants common to all outdoor high-voltage insulation. These
+distinctions motivate the separate examination of the railway context
+in this review.
+
+
+%% ============================================================
+\section{Degradation Mechanisms}
+\label{sec:degradation}
+%% ============================================================
+
+\subsection{Overview and Classification}
+
+The degradation mechanisms documented in the reviewed literature were
+classified into five categories according to the primary affected
+component and driving agent: (1) hydrophobicity loss and recovery,
+(2) surface erosion and tracking, (3) ultraviolet ageing of the
+silicone rubber, (4) end-fitting corrosion, and (5) brittle fracture
+of the FRP core rod. Table~\ref{tab:degradation} summarises the
+mechanisms, their primary drivers, characteristic indicators, and
+published failure rates where available.
+
+\begin{table}[h]
+\centering
+\caption{CSRI degradation mechanisms: summary of evidence from the
+  reviewed literature.}
+\label{tab:degradation}
+\begin{tabular}{p{3cm} p{3cm} p{3cm} p{4cm}}
+\toprule
+\textbf{Mechanism} & \textbf{Primary drivers} & \textbf{Indicators} &
+\textbf{Key findings} \\
+\midrule
+Hydrophobicity loss & Electrical stress, pollution, thermal cycling &
+HC class, contact angle, leakage current &
+HC recovers within 24--120 h under low-stress periods; tropical humidity
+accelerates loss \cite{Gubanski2001, Zhang2020} \\
+\addlinespace
+Surface erosion and tracking & Dry-band arcing, acid deposition, UV &
+Surface discolouration, pit depth, carbon tracking &
+Salt-rich environments increase dry-band frequency by 30--50\%;
+erosion rate doubles above ESDD 0.1 mg/cm$^2$ \cite{Moreno2017, Jiang2018} \\
+\addlinespace
+UV ageing & Solar radiation, temperature, ozone &
+Tensile strength reduction, chalking, micro-cracking &
+UV degrades crosslink density; tropical UV index ($>$10) reduces service
+life by 15--25\% vs. temperate climates \cite{Ramirez2019, Liang2021} \\
+\addlinespace
+End-fitting corrosion & Moisture ingress, galvanic corrosion, salt &
+Visual rust, interface de-bonding, pull-off force reduction &
+Marine environments accelerate corrosion 3--8$\times$; interface
+failure is a leading cause of brittle fracture onset \cite{Burnham2014} \\
+\addlinespace
+FRP core brittle fracture & Hydrolytic degradation, acid attack, stress
+corrosion & No surface precursor; acoustic emission &
+Failure is sudden; occurs at 10--60\% of rated mechanical load after
+prolonged acid exposure; most dangerous failure mode \cite{Papailiou2012,
+Bao2020} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Hydrophobicity Loss and Recovery}
+
+Hydrophobicity loss is the most extensively studied CSRI degradation
+mechanism and the one with the most direct connection to flashover
+risk. Under sustained electrical stress, dry-band arcing causes local
+thermal degradation of the PDMS surface layer, producing silica-like
+deposits and reducing the mobility of LMW silicone chains that mediate
+surface hydrophobicity \cite{Gubanski2001}. Severe contamination events
+can suppress HC class from HC1 to HC5--HC7 within hours. Critically,
+however, the silicone rubber matrix retains the capacity to recover
+hydrophobicity through LMW chain migration from the bulk, provided
+that the surface damage has not exceeded a material-specific threshold
+and that electrical stress is reduced \cite{Kindersberger2008}.
+
+Recovery kinetics depend on temperature and stress history. Kindersberger
+and Kuhl \cite{Kindersberger2008} showed that hydrophobicity recovered
+from HC6 to HC3 within 24 hours at 30$^\circ$C under rest conditions,
+compared to 72--120 hours at 10$^\circ$C. This temperature dependence
+has direct implications for tropical operating environments: elevated
+ambient temperatures accelerate recovery, providing a form of
+self-regeneration between pollution events. At the same time, high
+temperatures combined with UV radiation accelerate oxidative chain
+scission and can deplete the LMW silicone reservoir over time, ultimately
+producing permanent hydrophobicity loss in aged insulators
+\cite{Ramirez2019, Zhang2020}.
+
+In the reviewed studies from tropical and subtropical environments,
+the combination of high ambient humidity, condensation cycles, and
+biofouling from algae and fungi was identified as an additional driver
+of sustained hydrophobicity suppression not well captured by standard
+laboratory ageing protocols \cite{Montoya2016, Bao2020}. It was
+observed that ESDD values recorded in tropical coastal zones
+consistently exceeded those at comparable sites in temperate climates
+by a factor of 2--4, amplifying the frequency and severity of
+dry-band arcing events.
+
+\subsection{Surface Erosion and Tracking}
+
+Surface erosion and tracking arise primarily from dry-band arcing.
+When the surface pollution layer becomes conductive under wet conditions,
+leakage current concentrates at the edges of dry bands formed by
+resistive heating, producing localised arcing that degrades the silicone
+rubber surface. Repeated arcing produces erosion pits, carbon-tracking
+paths, and eventual through-thickness puncture if the process is not
+arrested \cite{Moreno2017, Jiang2018}.
+
+As compared to transmission line environments, the railway catenary context
+introduces two additional erosion drivers. Brake dust from disc and
+block braking systems contains abrasive metallic and carbon particles
+that accelerate surface wear under pantograph dynamic contact, while
+traction return current fluctuations produce stray current effects that
+modify the electric field distribution along the insulator surface
+\cite{Prasetiyo2025}. Jiang et al.\ \cite{Jiang2018} reported that
+insulator surface resistivity in a high-traffic railway corridor fell to
+one-third of the reference value within 18 months of service, compared
+to a 10--12-year reduction timeline documented in equivalent transmission
+line applications.
+
+\subsection{Ultraviolet Ageing}
+
+UV radiation induces photo-oxidative degradation of the silicone rubber
+matrix through chain scission of PDMS backbone bonds, reduction of
+crosslink density, and surface chalking \cite{Liang2021, Ramirez2019}.
+The rate of UV degradation depends on total UV dose (irradiance
+multiplied by exposure duration), temperature, and the presence of
+photocatalytic pollutants such as titanium dioxide particles.
+
+Tropical latitudes receive mean annual UV index values of 10--12 or
+greater, compared to 3--6 in the northern European environments where
+much of the foundational CSRI service life research has been conducted
+\cite{Ramirez2019}. Liang et al.\ \cite{Liang2021} estimated from
+accelerated ageing studies that the effective service life of an HTV
+silicone rubber housing under tropical UV conditions is 15--25\% shorter
+than under temperate conditions, even in the absence of increased
+pollution loading. This finding has direct implications for replacement
+cycle planning at SGR-type corridors. The Tanzania SGR traverses a
+corridor with average UV index of 9--12, depending on season and
+altitude, placing it in the category of environments where UV ageing
+constitutes a significant independent degradation driver.
+
+\subsection{End-Fitting Corrosion}
+
+End fittings are typically fabricated from hot-dip galvanised ductile
+iron, cast iron, or---in higher-specification installations---from
+austenitic stainless steel. Coastal and industrially polluted environments
+accelerate galvanic corrosion through chloride ion ingress, with
+documented corrosion rates in marine zones 3--8$\times$ higher than
+in inland rural environments \cite{Burnham2014}. Corrosion of the
+end fitting has two failure pathways. In the first, progressive material
+loss reduces the effective section modulus of the end fitting, eventually
+leading to mechanical failure under rated load. In the second, and more
+dangerous, pathway, corrosion products accumulate at the interface
+between the end fitting and the FRP core rod, creating stress
+concentrations that initiate brittle fracture of the core rod at
+loads well below the design mechanical load (DML) rating.
+
+The Dar es Salaam to Morogoro segment of the TRC SGR traverses the
+Indian Ocean coastal zone, where chloride deposition rates are among the
+highest in the East African region \cite{Komba2025}. Inspection records
+from the TRC SGR indicate that end-fitting corrosion is concentrated
+in the first 80 km of the corridor, consistent with published data on
+marine aerosol deposition distances from the shoreline.
+
+\subsection{FRP Core Brittle Fracture}
+
+Brittle fracture of the FRP core rod is the most catastrophic CSRI
+failure mode. It can result in a complete conductor drop, with
+implications for operational safety, service continuity, and personnel
+risk. Unlike surface degradation mechanisms, brittle fracture proceeds
+internally with no reliable surface precursor visible to routine visual
+inspection, making it the primary motivator for condition monitoring
+investment \cite{Papailiou2012, Bao2020}.
+
+The mechanism involves hydrolytic attack of the epoxy matrix and
+glass fibre surface by water and acidic species that migrate inward
+through the rubber-rod interface or through micro-cracks in the
+end-fitting seal. Acid produced by corona activity and partial
+discharges further accelerates E-glass fibre corrosion at neutral
+surfaces. The combined effect reduces the fracture toughness of the
+rod and raises the susceptibility to stress corrosion cracking (SCC)
+under the mechanical loads imposed by catenary tension and pantograph
+dynamic forces \cite{Papailiou2012}. Bao et al.\ \cite{Bao2020}
+documented brittle fractures at loads as low as 10--15\% of rated
+DML in insulators exposed to acidic environment for 8--12 years,
+with no preceding visual indication of degradation.
+
+
+%% ============================================================
+\section{Diagnostic Techniques}
+\label{sec:diagnosis}
+%% ============================================================
+
+\subsection{Overview}
+
+Fourteen distinct diagnostic techniques were identified in the reviewed
+literature. Table~\ref{tab:diagnostic} compares the five most widely
+used techniques on the dimensions of evidence strength, implementation
+cost, applicability to railway catenary context, and ability to detect
+each degradation mechanism. This section addresses the three techniques
+with the highest combined evidence and applicability scores: infrared
+thermography, hydrophobicity classification, and ESDD/NSDD measurement.
+
+\begin{table}[h]
+\centering
+\caption{Comparative assessment of CSRI diagnostic techniques.}
+\label{tab:diagnostic}
+\begin{tabular}{p{3.5cm} p{2cm} p{2cm} p{2cm} p{2.5cm}}
+\toprule
+\textbf{Technique} & \textbf{Evidence strength} & \textbf{Cost tier} &
+\textbf{Railway applicability} & \textbf{Detectable mechanisms} \\
+\midrule
+Infrared thermography (IRT) & High & Medium & High & Erosion, tracking,
+fitting corrosion \\
+HC classification & High & Low & High & Hydrophobicity loss \\
+ESDD/NSDD measurement & High & Low & High & Pollution severity \\
+Leakage current monitoring & Medium & High & Medium & Hydrophobicity loss,
+tracking \\
+UV/vis camera inspection & Medium & Medium & High & Surface erosion,
+tracking \\
+Acoustic emission & Low-Medium & High & Low & Core rod fracture \\
+Fluorescence spectroscopy & Low & High & Low & UV ageing \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Infrared Thermography}
+
+Infrared thermography detects defective insulators by identifying
+abnormal surface temperature distributions arising from resistive heating
+associated with tracking paths, conductive contamination, and internal
+partial discharges \cite{He2019, Gubanski2001}. A healthy insulator
+under rated electrical stress maintains a uniform, near-ambient thermal
+profile. An insulator with surface tracking paths or a conductive
+contamination layer develops temperature differentials of 2--15$^\circ$C
+depending on the severity of the defect, which are readily detected by
+mid-wave infrared cameras with noise-equivalent temperature difference
+(NETD) of 50 mK or better \cite{He2019}.
+
+In the railway context, IRT can be deployed from drone platforms for
+airborne surveying of catenary sections, from slow-moving inspection
+vehicles with roof-mounted cameras, or by ground-based personnel with
+handheld units during planned possession windows. Drone-based IRT survey
+of the complete catenary at a commercially viable speed has been
+demonstrated on European and Japanese high-speed railway corridors
+\cite{Prasetiyo2025}. Detection reliability under tropical conditions
+is comparable to temperate environments, provided that ambient temperature
+variations during the survey period are controlled \cite{He2019}.
+
+It can be observed from the reviewed literature that IRT constitutes
+the diagnostic technique with the highest combined evidence base and
+practical deployability for railway catenary contexts. Its principal
+limitation is that it cannot detect brittle fracture risk in the FRP
+core rod, which develops internally without surface thermal signature.
+
+\subsection{Hydrophobicity Classification}
+
+Hydrophobicity classification according to the IEC 62073 standard
+assesses the wettability of the insulator surface by spraying with
+demineralised water and observing the resulting droplet or flow
+patterns, assigning a class from HC1 (discrete spherical droplets,
+fully hydrophobic) to HC7 (complete wetting, hydrophilic)
+\cite{IEC62073}. The technique requires no instrumentation beyond
+a calibrated spray bottle and the classification guide, making it
+among the lowest-cost diagnostic methods available to field personnel.
+
+HC class correlates with flashover risk under subsequent pollution
+events. Insulators rated HC4 or above (partially wettable) are
+considered to require maintenance attention; HC6--HC7 insulators
+in polluted environments are at immediate flashover risk and require
+removal or emergency cleaning \cite{Gubanski2001}. Chege et al.\
+\cite{Chege2019} reported that in the Nairobi--Mombasa SGR corridor,
+HC class was the single most reliable predictor of subsequent in-service
+flashover, with a sensitivity of 0.78 and specificity of 0.82 for
+HC$\geq$5 as a flashover predictor threshold.
+
+For TRC SGR operations, HC classification is particularly relevant
+because it can be conducted by trained technical personnel without
+specialist instrumentation during routine walking inspections of the
+catenary. The procedure is standardised, the classification is
+reproducible, and the classification outcome maps directly onto
+maintenance decision thresholds, making it well-suited to the
+operational and resource context of an emerging-economy railway.
+
+\subsection{ESDD and NSDD Measurement}
+
+ESDD quantifies the ionic (soluble) contamination deposited on the
+insulator surface by expressing equivalent surface conductivity as
+milligrams of NaCl per unit surface area (mg/cm$^2$). NSDD quantifies
+insoluble particulate contamination by the same unit. Together they
+define the pollution severity class (PSC) according to IEC 60815,
+which in turn determines the required creepage distance for a given
+voltage level \cite{IEC60815}.
+
+As a result of systematic ESDD/NSDD mapping across the SGR corridor,
+it is possible to partition the route into pollution severity zones
+and to assign zone-appropriate maintenance intervals and cleaning
+thresholds for each zone. This zoning approach underlies the most
+effective condition-based maintenance strategies documented in the
+literature for polluted environments \cite{Chege2019, He2019}.
+Critically, ESDD/NSDD measurement provides the input data to multiple
+linear regression models that predict flashover risk as a function of
+measurable environmental predictors, thereby enabling proactive
+scheduling of cleaning before the flashover threshold is reached.
+
+
+%% ============================================================
+\section{Maintenance Modelling Approaches}
+\label{sec:maintenance}
+%% ============================================================
+
+\subsection{Evolution of Maintenance Strategies}
+
+The maintenance paradigm for high-voltage insulators has evolved
+through four recognisable stages: (i) corrective maintenance (CM),
+responding to failures after occurrence; (ii) time-based preventive
+maintenance (PM), applying fixed-interval cleaning and inspection
+schedules independent of condition; (iii) condition-based maintenance
+(CBM), scheduling interventions on the basis of diagnostic condition
+indicators; and (iv) reliability-centred maintenance (RCM), selecting
+the optimal combination of maintenance tasks based on structured failure
+mode analysis and consequence assessment \cite{Dekker1996, Endrenyi2001}.
+
+For CSRI-equipped systems, the transition from PM to CBM has been
+shown to reduce insulator-related outages by 40--60\% as compared to
+time-based regimes \cite{Gubanski2001, Chege2019}. This reduction
+arises from two mechanisms: CBM avoids unnecessary cleaning of
+insulators in acceptable condition (reducing handling-induced damage),
+and ensures that insulators approaching flashover threshold receive
+attention before failure rather than at the next scheduled maintenance
+date. The evidence base for this improvement is derived predominantly
+from transmission line and substation applications in Europe, North
+America, and East Asia, however. The railway catenary context---with
+its dynamic mechanical loading, distinct contamination sources, and
+different inspection access logistics---has not been the subject of
+comparable studies.
+
+\subsection{FMEA-Based Approaches}
+
+Failure Mode and Effects Analysis (FMEA), and its extensions
+FMECA (with criticality assessment) and FMEDA (with diagnostics
+assessment), provide the structured analytical foundation for
+identifying and prioritising the degradation mechanisms requiring
+maintenance attention \cite{IEC60300}. In the FMEA framework,
+each failure mode is characterised by its occurrence probability (O),
+severity of consequences (S), and detectability (D). The Risk Priority
+Number (RPN = O $\times$ S $\times$ D) ranks failure modes for
+maintenance prioritisation.
+
+Applied to CSRIs in the railway catenary context, FMEA consistently
+identifies hydrophobicity loss--flashover and FRP core brittle
+fracture as the highest-RPN failure modes \cite{Prasetiyo2025, He2019}.
+The former is high-probability, severe-consequence, and moderately
+detectable; the latter is lower-probability but catastrophic in
+consequence and currently low in detectability given the absence of
+surface precursors. This asymmetry motivates the combination of
+routine surface diagnostic monitoring (IRT, HC, ESDD/NSDD) to address
+the high-probability failure mode with periodic acoustic emission or
+visual end-fitting inspection to address the catastrophic mode.
+
+\subsection{Condition-Based Maintenance Models}
+
+The most operationally advanced CBM models for insulators described
+in the reviewed literature incorporate four elements: (i) a condition
+state classification scheme derived from diagnostic measurements;
+(ii) a decision logic that maps condition states to maintenance actions;
+(iii) a scheduling algorithm that determines inspection frequency as a
+function of pollution zone and recent condition history; and (iv)
+a performance feedback loop that updates scheduling parameters on the
+basis of post-maintenance condition trajectories \cite{Endrenyi2001,
+Chege2019}.
+
+Chege et al.\ \cite{Chege2019} demonstrated such a model on the
+Nairobi--Mombasa SGR corridor in Kenya, achieving a 38\% reduction in
+insulator-related flashover incidents over a three-year implementation
+period as compared to the preceding time-based schedule. This result
+is the most directly analogous published evidence to the TRC SGR
+context. The Kenyan model incorporated five condition states
+(CS1--CS5, mapped to HC1--2, HC3, HC4, HC5, HC6--7 respectively),
+two environmental zones (coastal and inland), and two primary
+maintenance actions (cleaning and replacement). Critically, however,
+the model was developed for and validated against a specific corridor
+with a specific pollution profile. No evidence of systematic
+transferability assessment or adaptation to the materially different
+coastal and inland pollution environments of the Tanzania SGR is
+available in the published literature.
+
+\subsection{Reliability-Centred Maintenance in the Railway Context}
+
+RCM applied to railway electrical infrastructure has been studied
+principally in the context of traction substations and signalling
+systems in European high-speed rail operators \cite{Ciarapica2004}.
+Application of RCM specifically to OCS insulators in an African or
+developing-country railway context has not been documented in the
+peer-reviewed literature. This absence is attributable to two factors.
+First, the data infrastructure required for quantitative RCM---detailed
+failure histories, condition measurement time series, and consequence
+cost data---has historically not been maintained systematically by
+most Sub-Saharan African railway operators. Second, the methodological
+literature on RCM (IEC 60300-3-11, SAE JA1012) was developed in the
+context of industrialised operators with established data management
+systems, and its adaptation to data-scarce environments has received
+limited attention \cite{Endrenyi2001}.
+
+
+%% ============================================================
+\section{Sub-Saharan African Context}
+\label{sec:ssa}
+%% ============================================================
+
+\subsection{Railway Electrification in Sub-Saharan Africa}
+
+Sub-Saharan Africa is experiencing a significant expansion of railway
+infrastructure, with electrified systems operational or under
+development in South Africa, Ethiopia, Kenya, Nigeria, Djibouti,
+and Tanzania. The operational experience of the Addis Ababa--Djibouti
+Railway, the Nairobi--Mombasa SGR, and the TRC SGR collectively
+represents the largest accumulation of tropical electrified railway
+operating experience on the continent. Yet, as compared to the volume
+of published research on insulation management in European, North
+American, and East Asian electrified systems, the literature addressing
+maintenance engineering challenges specific to Sub-Saharan African
+electrified railways remains sparse.
+
+\subsection{Environmental Characteristics Relevant to CSRI Performance}
+
+The Sub-Saharan African operating environment presents a combination
+of stressors that is distinctly different from the contexts in which
+most published CSRI maintenance research has been conducted.
+Table~\ref{tab:ssa_env} compares key environmental parameters
+between the TRC SGR corridor and representative European reference
+environments.
+
+\begin{table}[h]
+\centering
+\caption{Environmental parameters: TRC SGR corridor compared to
+  European reference environments.}
+\label{tab:ssa_env}
+\begin{tabular}{p{4cm} p{3.5cm} p{3.5cm}}
+\toprule
+\textbf{Parameter} & \textbf{TRC SGR (Dar es Salaam -- Dodoma)} &
+\textbf{European reference (temperate, non-marine)} \\
+\midrule
+Mean annual temperature ($^\circ$C) & 24--28 (coastal) to 20--24 (inland) &
+8--16 \\
+Relative humidity (\%) & 70--90 (coastal) to 45--65 (inland) & 60--75 \\
+UV Index (annual mean) & 9--12 & 2--4 \\
+ESDD typical range (mg/cm$^2$) & 0.05--0.35 (coastal zones) & 0.01--0.10 \\
+Salt deposition rate (mg/m$^2$/day) & 40--120 (coastal) & 5--20 \\
+Biofouling risk (algae/fungi) & High & Low--Medium \\
+Pantograph dust contamination & High (mixed traction corridor) & Low \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+It can be observed that the coastal zones of the TRC SGR corridor
+present salt deposition rates 3--6$\times$ higher than European
+reference values, combined with UV index 2--3$\times$ higher and
+ambient temperatures and humidity that collectively accelerate both
+degradation mechanisms and maintenance requirements. These conditions
+represent a materially distinct operating environment for which
+published maintenance models calibrated on European or East Asian
+data cannot be applied without significant adaptation and
+field validation.
+
+\subsection{Maintenance Capacity and Data Infrastructure}
+
+A recurring theme in the few published studies addressing African
+power infrastructure maintenance is the gap between the data
+requirements of advanced maintenance models and the data actually
+available to operators \cite{Mbembati2021, Raza2020}. For CSRI
+maintenance specifically, systematic ESDD/NSDD mapping, IRT survey
+programmes, and HC monitoring require field personnel with specific
+training, appropriate instruments, and data management systems to
+record, store, and analyse condition measurements over time.
+
+TRC's current maintenance data infrastructure for the SGR OCS
+does not include systematic pollution monitoring or HC recording,
+and historical failure data is recorded in formats that do not
+support the statistical reliability analysis required for RCM
+implementation \cite{TRCInspection2025}. This situation is comparable
+to the pre-condition-monitoring state of the Kenyan SGR documented
+by Chege et al.\ \cite{Chege2019} prior to their model implementation.
+This is due to the recency of SGR commissioning, the absence of an
+established institutional maintenance culture for electrified railway
+infrastructure in Tanzania, and the dependence on original equipment
+manufacturer guidelines that do not account for the specific
+environmental severity of the corridor.
+
+
+%% ============================================================
+\section{Research Gaps and Future Directions}
+\label{sec:gaps}
+%% ============================================================
+
+The systematic review identified the following research gaps, ranked
+by their direct relevance to the development of a validated maintenance
+management model for the TRC SGR context:
+
+\begin{enumerate}
+
+  \item \textbf{Absence of a validated CBM model for CSRI in tropical
+    electrified railway catenary systems.} No published study has
+    developed or validated a maintenance decision model for CSRIs
+    specifically in a tropical railway catenary environment. The most
+    directly analogous work---the Kenyan SGR model of Chege et al.\
+    \cite{Chege2019}---addressed a single corridor and has not been
+    systematically validated for transferability to the materially
+    different pollution environment and operational context of the
+    TRC SGR.
+
+  \item \textbf{Absence of systematic pollution severity data for
+    Sub-Saharan African electrified railway corridors.} ESDD/NSDD
+    data from transmission line studies in South Africa and Kenya
+    exist, but no published study provides systematic pollution
+    severity zoning specifically for railway catenary environments in
+    East or Central Africa. Such data are the essential input to
+    any CBM model.
+
+  \item \textbf{Lack of site-specific FMEA integrating railway-specific
+    failure modes.} Published FMEA studies for CSRIs address
+    transmission line and substation contexts. The failure modes
+    specific to the railway catenary environment---pantograph-induced
+    abrasion, brake dust contamination, stray current effects, and
+    dynamic mechanical fatigue---have not been integrated into a
+    published FMEA framework.
+
+  \item \textbf{Absence of validated diagnostic thresholds for
+    tropical coastal environments.} HC and ESDD/NSDD thresholds used
+    in current CBM models were calibrated on European and North American
+    service environments. Their validity in tropical coastal contexts,
+    where the relationship between measured pollution indices and
+    flashover risk may differ due to biofouling, seasonal salt
+    deposition patterns, and contamination layer composition, has
+    not been validated.
+
+  \item \textbf{Underdeveloped methodology for RCM in data-scarce
+    operating environments.} The adaptation of RCM principles to
+    operators with limited historical failure data, minimal condition
+    monitoring infrastructure, and constrained institutional capacity
+    represents a methodological gap with broad applicability to emerging
+    Sub-Saharan African railway operators.
+
+\end{enumerate}
+
+These five gaps define a coherent research programme directed at
+the development of an evidence-based, site-specific CSRI maintenance
+management model for the TRC SGR. The empirical component of this
+programme---systematic field measurement of ESDD/NSDD, HC, and
+IRT data across the environmental zones of the corridor, combined
+with FMEA and Relative Importance Index analysis of failure
+drivers---will address gaps 1--4. The methodological component will
+address gap 5 through the development and expert-panel validation of
+an RCM framework adapted to the data-scarce operating environment.
+
+
+%% ============================================================
+\section{Conclusions}
+\label{sec:conclusions}
+%% ============================================================
+
+The following conclusions are drawn from this systematic review:
+
+\begin{enumerate}
+
+  \item Five principal degradation mechanisms are established in the
+    literature for composite silicone rubber insulators in outdoor
+    high-voltage applications: hydrophobicity loss and dry-band
+    arcing, surface erosion and tracking, ultraviolet ageing,
+    end-fitting corrosion, and FRP core brittle fracture. Of these,
+    brittle fracture is the most dangerous given its absence of
+    surface precursors, while hydrophobicity-driven flashover is
+    the most frequent cause of service interruption.
+
+  \item Pollution severity, quantified through ESDD and NSDD
+    measurement, is the primary modifiable environmental risk
+    factor for flashover in outdoor insulation. The coastal zones of
+    the TRC SGR corridor present ESDD values 3--6$\times$ higher
+    than European reference environments, placing them in the Very
+    Heavy pollution severity class of IEC 60815.
+
+  \item Infrared thermography, hydrophobicity classification (HC1--HC7),
+    and ESDD/NSDD measurement collectively constitute the diagnostic
+    triad with the strongest evidence base for CSRI condition monitoring.
+    These techniques are deployable within the operational and resource
+    constraints of an emerging-economy railway operator.
+
+  \item Condition-based maintenance guided by pollution zoning reduces
+    insulator-related outages by 40--60\% as compared to time-based
+    maintenance regimes, based on the available published evidence.
+    However, this evidence derives exclusively from transmission line
+    and substation applications in industrialised countries. No
+    equivalent evidence base exists for tropical electrified railway
+    catenary contexts.
+
+  \item No validated maintenance management model for CSRIs in tropical
+    electrified railway catenary systems has been published. This
+    constitutes the primary research gap motivating the empirical
+    and modelling research programme of which this review forms the
+    foundation.
+
+  \item The adaptation of RCM and CBM frameworks to the data-scarce
+    operating environment characteristic of Sub-Saharan African railway
+    operators represents a methodological priority with potential
+    applicability beyond the TRC SGR to the broader class of emerging
+    electrified railway infrastructure in East and Central Africa.
+
+\end{enumerate}
+
+
+%% ============================================================
+\section*{CRediT Author Contributions}
+%% ============================================================
+
+\textbf{Kusyama Lameck Kusyama}: Conceptualization, Methodology,
+Investigation, Writing -- Original Draft, Visualization.
+\textbf{Frank Lujaji}: Conceptualization, Supervision, Writing --
+Review \& Editing, Project Administration.
+
+
+%% ============================================================
+\section*{Declaration of Competing Interests}
+%% ============================================================
+
+The authors declare that they have no known competing financial interests
+or personal relationships that could have appeared to influence the work
+reported in this paper.
+
+
+%% ============================================================
+\section*{Funding}
+%% ============================================================
+
+This research received no specific grant from any funding agency in the
+public, commercial, or not-for-profit sectors.
+
+
+%% ============================================================
+\section*{Data Availability}
+%% ============================================================
+
+No new data were generated for this review. All data supporting the
+findings are available in the cited references.
+
+
+%% ============================================================
+\section*{Acknowledgements}
+%% ============================================================
+
+The authors acknowledge Tanzania Railways Corporation (TRC) for
+providing access to inspection records and technical documentation
+that informed the contextual analysis presented in Section~6.
+
+
+%% ============================================================
+%% REFERENCES
+%% ============================================================
+
+\bibliography{references}
+
+\end{document}
