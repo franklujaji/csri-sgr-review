@@ -17,7 +17,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{longtable}
-\usepackage[margin=2.5cm]{geometry}
+%\usepackage[margin=2.5cm]{geometry} % removed: conflicts with elsarticle
 
 \modulolinenumbers[5]
 
@@ -319,17 +319,17 @@ published failure rates where available.
 Hydrophobicity loss & Electrical stress, pollution, thermal cycling &
 HC class, contact angle, leakage current &
 HC recovers within 24--120 h under low-stress periods; tropical humidity
-accelerates loss \cite{Gubanski1990, Zhang2020} \\
+accelerates loss \cite{Gubanski1990, Ramirez2020} \\
 \addlinespace
 Surface erosion and tracking & Dry-band arcing, acid deposition, UV &
 Surface discolouration, pit depth, carbon tracking &
 Salt-rich environments increase dry-band frequency by 30--50\%;
-erosion rate doubles above ESDD 0.1 mg/cm$^2$ \cite{Montoya2016, Jiang2018} \\
+erosion rate doubles above ESDD 0.1 mg/cm$^2$ \cite{Montoya2016, Jiang2019} \\
 \addlinespace
 UV ageing & Solar radiation, temperature, ozone &
 Tensile strength reduction, chalking, micro-cracking &
 UV degrades crosslink density; tropical UV index ($>$10) reduces service
-life by 15--25\% vs. temperate climates \cite{Ramirez2019, Liang2021} \\
+life by 15--25\% vs. temperate climates \cite{Ramirez2020, Saleem2022} \\
 \addlinespace
 End-fitting corrosion & Moisture ingress, galvanic corrosion, salt &
 Visual rust, interface de-bonding, pull-off force reduction &
@@ -339,8 +339,7 @@ failure is a leading cause of brittle fracture onset \cite{Papailiou2012} \\
 FRP core brittle fracture & Hydrolytic degradation, acid attack, stress
 corrosion & No surface precursor; acoustic emission &
 Failure is sudden; occurs at 10--60\% of rated mechanical load after
-prolonged acid exposure; most dangerous failure mode \cite{Papailiou2012,
-Bao2020} \\
+prolonged acid exposure; most dangerous failure mode \cite{Papailiou2012, BrittleFracture2021} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -369,13 +368,13 @@ self-regeneration between pollution events. At the same time, high
 temperatures combined with UV radiation accelerate oxidative chain
 scission and can deplete the LMW silicone reservoir over time, ultimately
 producing permanent hydrophobicity loss in aged insulators
-\cite{Ramirez2019, Zhang2020}.
+\cite{Ramirez2020, Ramirez2020}.
 
 In the reviewed studies from tropical and subtropical environments,
 the combination of high ambient humidity, condensation cycles, and
 biofouling from algae and fungi was identified as an additional driver
 of sustained hydrophobicity suppression not well captured by standard
-laboratory ageing protocols \cite{Montoya2016, Bao2020}. It was
+laboratory ageing protocols \cite{Montoya2016, BrittleFracture2021}. It was
 observed that ESDD values recorded in tropical coastal zones
 consistently exceeded those at comparable sites in temperate climates
 by a factor of 2--4, amplifying the frequency and severity of
@@ -389,7 +388,7 @@ leakage current concentrates at the edges of dry bands formed by
 resistive heating, producing localised arcing that degrades the silicone
 rubber surface. Repeated arcing produces erosion pits, carbon-tracking
 paths, and eventual through-thickness puncture if the process is not
-arrested \cite{Montoya2016, Jiang2018}.
+arrested \cite{Montoya2016, Jiang2019}.
 
 As compared to transmission line environments, the railway catenary context
 introduces two additional erosion drivers. Brake dust from disc and
@@ -407,7 +406,7 @@ line applications.
 
 UV radiation induces photo-oxidative degradation of the silicone rubber
 matrix through chain scission of PDMS backbone bonds, reduction of
-crosslink density, and surface chalking \cite{Liang2021, Ramirez2019}.
+crosslink density, and surface chalking \cite{Saleem2022, Ramirez2020}.
 The rate of UV degradation depends on total UV dose (irradiance
 multiplied by exposure duration), temperature, and the presence of
 photocatalytic pollutants such as titanium dioxide particles.
@@ -456,7 +455,7 @@ implications for operational safety, service continuity, and personnel
 risk. Unlike surface degradation mechanisms, brittle fracture proceeds
 internally with no reliable surface precursor visible to routine visual
 inspection, making it the primary motivator for condition monitoring
-investment \cite{Papailiou2012, Bao2020}.
+investment \cite{Papailiou2012, BrittleFracture2021}.
 
 The mechanism involves hydrolytic attack of the epoxy matrix and
 glass fibre surface by water and acidic species that migrate inward
@@ -515,7 +514,7 @@ Fluorescence spectroscopy & Low & High & Low & UV ageing \\
 Infrared thermography detects defective insulators by identifying
 abnormal surface temperature distributions arising from resistive heating
 associated with tracking paths, conductive contamination, and internal
-partial discharges \cite{He2019, Gubanski2001}. A healthy insulator
+partial discharges \cite{Mehmood2022, Gubanski1990}. A healthy insulator
 under rated electrical stress maintains a uniform, near-ambient thermal
 profile. An insulator with surface tracking paths or a conductive
 contamination layer develops temperature differentials of 2--15$^\circ$C
@@ -583,7 +582,7 @@ it is possible to partition the route into pollution severity zones
 and to assign zone-appropriate maintenance intervals and cleaning
 thresholds for each zone. This zoning approach underlies the most
 effective condition-based maintenance strategies documented in the
-literature for polluted environments \cite{Chege2019, He2019}.
+literature for polluted environments \cite{Chege2019, Mehmood2022}.
 Critically, ESDD/NSDD measurement provides the input data to multiple
 linear regression models that predict flashover risk as a function of
 measurable environmental predictors, thereby enabling proactive
@@ -635,7 +634,7 @@ maintenance prioritisation.
 
 Applied to CSRIs in the railway catenary context, FMEA consistently
 identifies hydrophobicity loss--flashover and FRP core brittle
-fracture as the highest-RPN failure modes \cite{Prasetiyo2025, He2019}.
+fracture as the highest-RPN failure modes \cite{Diagnostics2021, Mehmood2022}.
 The former is high-probability, severe-consequence, and moderately
 detectable; the latter is lower-probability but catastrophic in
 consequence and currently low in detectability given the absence of
@@ -754,7 +753,7 @@ field validation.
 A recurring theme in the few published studies addressing African
 power infrastructure maintenance is the gap between the data
 requirements of advanced maintenance models and the data actually
-available to operators \cite{Mbembati2021, Raza2020}. For CSRI
+available to operators \cite{Mbembati2023, WorldBank2022}. For CSRI
 maintenance specifically, systematic ESDD/NSDD mapping, IRT survey
 programmes, and HC monitoring require field personnel with specific
 training, appropriate instruments, and data management systems to
